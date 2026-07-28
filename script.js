@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `;
 
-    const footerBottom = create('div', ['footer-bottom'], {}, '© 2024 SYLUX. All Rights Reserved.');
+  const footerBottom = create('div', ['footer-bottom'], {}, '© 2026 SYLUX. All Rights Reserved.');
 
     footerContainer.appendChild(footerGrid);
     footerContainer.appendChild(footerBottom);
