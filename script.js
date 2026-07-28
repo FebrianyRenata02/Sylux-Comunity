@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const aboutImgWrapper = create('div', ['about-image']);
     aboutImgWrapper.appendChild(create('img', [], {
-        src: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/About-Sylux.png?token=GHSAT0AAAAAAECGVEM5P53TUCHFD5E624I62TIRXKQ',
+        src: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/About-Sylux.png',
         alt: 'SYLUX Cyber Illustration'
     }));
 
@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <h2>READY TO JOIN <span class="highlight-blue">SYLUX</span>?</h2>
         <p>Be part of our amazing community and create unforgettable memories.</p>
       </div>
-      <a href="#" class="btn-large-discord"><i class="fa-brands fa-discord"></i> Join Discord Now</a>
+      <a href="https://discord.gg/sylux" class="btn-large-discord"><i class="fa-brands fa-discord"></i> Join Discord Now</a>
     `;
 
     prefooterContainer.appendChild(prefooterCard);
@@ -397,8 +397,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="footer-col">
         <h4>SOCIAL MEDIA</h4>
         <ul>
-          <li><a href="#">Discord</a></li>
-          <li><a href="#">Instagram</a></li>
+          <li><a href="https://discord.gg/sylux">Discord</a></li>
+          <li><a href="https://www.instagram.com/syluxcommunity_/">Instagram</a></li>
           <li><a href="#">YouTube</a></li>
           <li><a href="#">Twitter</a></li>
         </ul>
@@ -406,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="footer-join-box">
         <h5>Join Our Discord</h5>
         <p>Click the button below to join our amazing community!</p>
-        <a href="#" class="btn-small-discord"><i class="fa-brands fa-discord"></i> Join Discord</a>
+        <a href="https://discord.gg/sylux" class="btn-small-discord"><i class="fa-brands fa-discord"></i> Join Discord</a>
       </div>
     `;
 
@@ -433,7 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     mobileToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
-        mobileToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        mobileToggle.textContent = navMenu.classList.contains('active') ? '☰' : '☰';
     });
 
     navLinksUl.querySelectorAll('a').forEach(anchor => {
