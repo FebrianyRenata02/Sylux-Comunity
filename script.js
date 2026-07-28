@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const btnDiscordNav = create('a', ['btn-discord-nav'], {
-        href: 'https://discord.gg',
+        href: 'https://discord.gg/sylux',
         target: '_blank'
     });
     btnDiscordNav.innerHTML = `<i class="fa-brands fa-discord"></i> Join Discord`;
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutText.appendChild(featureList);
 
     const btnJoin = create('a', ['btn-purple'], {
-        href: '#'
+        href: 'https://discord.gg/sylux'
     });
     btnJoin.innerHTML = `<i class="fa-brands fa-discord"></i> Join Now <i class="fa-solid fa-arrow-right"></i>`;
     aboutText.appendChild(btnJoin);
