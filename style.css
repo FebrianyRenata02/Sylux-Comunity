@@ -46,7 +46,7 @@
   }
   
   .section-tag {
-    font-size: 0.8rem;
+    font-size: 1 rem;
     font-weight: 800;
     letter-spacing: 3px;
     color: var(--purple-light);
@@ -222,15 +222,15 @@
   
   .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    grid-template-columns: 4fr 4fr;
+    gap: 60px;
     align-items: center;
   }
   
   .about-tag {
-    font-size: 0.75rem;
+    font-size: 1 rem;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 9px;
     color: #6366f1;
     text-transform: uppercase;
     margin-bottom: 8px;
@@ -305,6 +305,7 @@
   /* --- FEATURES SECTION --- */
   .features-section {
     padding: 60px 0;
+    scroll-margin-top: calc(var(--nav-height) + 25px);
   }
   
   .features-grid {
@@ -380,8 +381,9 @@
   
   /* --- GALLERY SECTION --- */
   .gallery-section {
-    padding: 60px 0;
-  }
+    padding: 90px 0;
+    scroll-margin-top: calc(var(--nav-height) + 25px);
+}
   
   .gallery-grid {
     display: grid;
@@ -432,8 +434,9 @@
   
   /* --- STAFF SECTION --- */
   .staff-section {
-    padding: 60px 0;
-  }
+    padding: 90px 0;
+    scroll-margin-top: calc(var(--nav-height) + 25px);
+}
   
   .staff-grid {
     display: grid;
@@ -491,8 +494,9 @@
   
   /* --- PRE-FOOTER BANNER --- */
   .prefooter-section {
-    padding: 60px 0;
-  }
+    padding: 90px 0;
+    scroll-margin-top: calc(var(--nav-height) + 25px);
+}
   
   .prefooter-card {
     background: linear-gradient(135deg, #1e1b4b, #311042, #0284c7);
