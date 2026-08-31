@@ -356,7 +356,7 @@ document.addEventListener('DOMContentLoaded', () => {
             img: 'https://i.pravatar.cc/100?img=12'
         },
         {
-            name: 'Coffee ☕',
+            name: 'Rena ☕',
             role: 'Developer Staff',
             img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/rena-avatar.png'
         },
