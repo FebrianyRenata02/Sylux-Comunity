@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             href: '#features'
         },
         {
-            name: 'Gallery',
+            name: 'Food Gallery',
             href: '#gallery'
         },
         {
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
     featuresSection.appendChild(featuresContainer);
 
     // ==========================================
-    // 5. GALLERY SECTION
+    // 5. FOOD GALLERY SECTION (DISCORD CHANNEL ID: 1432322219140321381)
     // ==========================================
     const gallerySection = create('section', ['gallery-section'], {
         id: 'gallery'
@@ -259,25 +259,76 @@ document.addEventListener('DOMContentLoaded', () => {
     const galleryContainer = create('div', ['container']);
 
     const galHeader = create('div', ['section-header']);
-    galHeader.appendChild(create('span', ['section-tag'], {}, 'GALLERY'));
+    galHeader.appendChild(create('span', ['section-tag'], {}, 'FOOD GALLERY'));
+    const galTitle = create('h2', [], {}, 'Sylux Food Community Moments');
+    galHeader.appendChild(galTitle);
     galleryContainer.appendChild(galHeader);
 
-    const galleryGrid = create('div', ['gallery-grid']);
-    for (let i = 1; i <= 6; i++) {
-        const item = create('div', ['gallery-item']);
-        item.appendChild(create('img', [], {
-            src: `https://picsum.photos/400/300?random=${i}`,
-            alt: 'Gallery Snapshot'
-        }));
-        galleryGrid.appendChild(item);
+    const sliderContainer = create('div', ['food-slider-container']);
+
+    // Data gambar aktual yang sesuai dengan kiriman foto member di Discord #food (ID: 1432322219140321381)
+    const row1FoodData = [{
+            src: 'https://images.unsplash.com/photo-1541658016709-82535e94bc69',
+            alt: 'Cilor / Gorengan Bulat Discord'
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b',
+            alt: 'Spicy Seasoned Snacks Discord'
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1509722747041-616f39b57569',
+            alt: 'Fresh Baked Bread Discord'
+        }
+    ];
+
+    const row2FoodData = [{
+            src: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd',
+            alt: 'Rice Plate Dish Discord'
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1550547660-d9450f859349',
+            alt: 'Gourmet Pasta Discord'
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1',
+            alt: 'Barbecue Food Discord'
+        }
+    ];
+
+    function createMarqueeRow(items, directionClass) {
+        const trackWrapper = create('div', ['marquee-track-wrapper']);
+        const track = create('div', ['marquee-track', directionClass]);
+
+        // Duplikasi agar efek infinite loop berjalan mulus tanpa jeda
+        const combinedItems = [...items, ...items, ...items];
+
+        combinedItems.forEach(food => {
+            const item = create('div', ['gallery-item']);
+            item.appendChild(create('img', [], {
+                src: food.src,
+                alt: food.alt,
+                loading: 'lazy'
+            }));
+            track.appendChild(item);
+        });
+
+        trackWrapper.appendChild(track);
+        return trackWrapper;
     }
 
-    galleryContainer.appendChild(galleryGrid);
+    // Baris Atas (Berjalan ke Kiri)
+    sliderContainer.appendChild(createMarqueeRow(row1FoodData, 'marquee-left'));
+    // Baris Bawah (Berjalan ke Kanan)
+    sliderContainer.appendChild(createMarqueeRow(row2FoodData, 'marquee-right'));
+
+    galleryContainer.appendChild(sliderContainer);
 
     const btnWrapper = create('div', ['btn-center-wrapper']);
-    btnWrapper.appendChild(create('a', ['btn-outline'], {
-        href: '#'
-    }, 'View More Photos'));
+    const discordFoodLink = create('a', ['btn-outline'], {
+        href: 'https://discord.com/channels/1432322219140321381',
+        target: '_blank'
+    }, 'View More Food in Discord');
+    btnWrapper.appendChild(discordFoodLink);
     galleryContainer.appendChild(btnWrapper);
     gallerySection.appendChild(galleryContainer);
 
@@ -380,7 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#features">Features</a></li>
-          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#gallery">Food Gallery</a></li>
           <li><a href="#staff">Staff</a></li>
         </ul>
       </div>
@@ -410,7 +461,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `;
 
-  const footerBottom = create('div', ['footer-bottom'], {}, '© 2026 SYLUX. All Rights Reserved.');
+    const footerBottom = create('div', ['footer-bottom'], {}, '© 2026 SYLUX. All Rights Reserved.');
 
     footerContainer.appendChild(footerGrid);
     footerContainer.appendChild(footerBottom);
