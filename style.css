@@ -673,3 +673,37 @@
     .prefooter-card { flex-direction: column; text-align: center; gap: 20px; }
     .footer-grid { grid-template-columns: 1fr; }
   }
+
+  .food-slider-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.marquee-track-wrapper {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.marquee-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+}
+.marquee-left {
+    animation: scrollLeft 25s linear infinite;
+}
+.marquee-right {
+    animation: scrollRight 25s linear infinite;
+}
+@keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.33%); }
+}
+@keyframes scrollRight {
+    0% { transform: translateX(-33.33%); }
+    100% { transform: translateX(0); }
+}
