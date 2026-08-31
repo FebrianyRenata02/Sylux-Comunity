@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const btnWrapper = create('div', ['btn-center-wrapper']);
     const discordFoodLink = create('a', ['btn-outline'], {
-        href: 'https://discord.com/channels/1432322219140321381',
+        href: 'https://discord.com/channels/1415636393211854898/1432322219140321381',
         target: '_blank'
     }, 'View More Food in Discord');
     btnWrapper.appendChild(discordFoodLink);
@@ -536,30 +536,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const row1StaffData = staffData.slice(0, halfIndex);
     const row2StaffData = staffData.slice(halfIndex);
 
-    function createStaffMarqueeRow(items, directionClass) {
-        const trackWrapper = create('div', ['marquee-track-wrapper']);
-        const track = create('div', ['marquee-track', directionClass]);
-        const combinedItems = [...items, ...items, ...items];
-
-        combinedItems.exports = combinedItems.forEach(s => {
-            const card = create('div', ['staff-card']);
-            card.innerHTML = `
-                <img src="${s.img}" class="staff-avatar" alt="${s.name || 'Staff'}">
-                <div class="staff-info">
-                  <h4>${s.name || 'Staff Member'}</h4>
-                  <span>${s.role}</span>
-                  <span class="staff-status"><i class="fa-solid fa-circle"></i> Online</span>
-                </div>
-                <i class="fa-brands fa-discord staff-discord-icon"></i>
-            `;
-            track.appendChild(card);
-        });
-
-        trackWrapper.appendChild(track);
-        return trackWrapper;
-    }
-
-    // Menggunakan fungsi render baris staff dengan animasi yang sama seperti galeri makanan
     function generateStaffMarquee(items, directionClass) {
         const trackWrapper = create('div', ['marquee-track-wrapper']);
         const track = create('div', ['marquee-track', directionClass]);
