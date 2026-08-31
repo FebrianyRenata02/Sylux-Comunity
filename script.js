@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'Rena ☕',
             role: 'Developer Staff',
-            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/rena-avatar.png'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/renata%20ceo%20berdiri.png'
         },
         {
             name: 'Daja',
