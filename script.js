@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
     featuresSection.appendChild(featuresContainer);
 
     // ==========================================
-    // 5. FOOD GALLERY SECTION (DISCORD CHANNEL ID: 1432322219140321381)
+    // 5. FOOD GALLERY SECTION
     // ==========================================
     const gallerySection = create('section', ['gallery-section'], {
         id: 'gallery'
@@ -266,7 +266,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const sliderContainer = create('div', ['food-slider-container']);
 
-    // Data gambar aktual yang sesuai dengan kiriman foto member di Discord #food (ID: 1432322219140321381)
     const row1FoodData = [{
             src: 'https://images.unsplash.com/photo-1541658016709-82535e94bc69',
             alt: 'Cilor / Gorengan Bulat Discord'
@@ -298,8 +297,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function createMarqueeRow(items, directionClass) {
         const trackWrapper = create('div', ['marquee-track-wrapper']);
         const track = create('div', ['marquee-track', directionClass]);
-
-        // Duplikasi agar efek infinite loop berjalan mulus tanpa jeda
         const combinedItems = [...items, ...items, ...items];
 
         combinedItems.forEach(food => {
@@ -316,11 +313,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return trackWrapper;
     }
 
-    // Baris Atas (Berjalan ke Kiri)
     sliderContainer.appendChild(createMarqueeRow(row1FoodData, 'marquee-left'));
-    // Baris Bawah (Berjalan ke Kanan)
     sliderContainer.appendChild(createMarqueeRow(row2FoodData, 'marquee-right'));
-
     galleryContainer.appendChild(sliderContainer);
 
     const btnWrapper = create('div', ['btn-center-wrapper']);
@@ -333,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gallerySection.appendChild(galleryContainer);
 
     // ==========================================
-    // 6. OUR STAFF SECTION
+    // 6. OUR STAFF SECTION (LIVE WALKING MARQUEE)
     // ==========================================
     const staffSection = create('section', ['staff-section'], {
         id: 'staff'
@@ -344,49 +338,255 @@ document.addEventListener('DOMContentLoaded', () => {
     staffHeader.appendChild(create('span', ['section-tag'], {}, 'OUR STAFF'));
     staffContainer.appendChild(staffHeader);
 
-    const staffGrid = create('div', ['staff-grid']);
+    const staffSliderContainer = create('div', ['staff-slider-container']);
+
     const staffData = [{
-            name: 'Sylux',
-            role: 'Owner',
+            name: 'Senaidert',
+            role: 'Founder',
             img: 'https://i.pravatar.cc/100?img=33'
         },
         {
-            name: 'Luxx',
-            role: 'Administrator',
+            name: 'Arisa',
+            role: 'Owner',
             img: 'https://i.pravatar.cc/100?img=12'
         },
         {
-            name: 'Psycho',
-            role: 'Moderator',
+            name: 'Jean',
+            role: 'Head Staff',
+            img: 'https://i.pravatar.cc/100?img=12'
+        },
+        {
+            name: 'Coffee ☕',
+            role: 'Developer Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/rena-avatar.png'
+        },
+        {
+            name: 'Daja',
+            role: 'Developer Staff',
             img: 'https://i.pravatar.cc/100?img=47'
         },
         {
-            name: 'Luna',
-            role: 'Moderator',
+            name: 'pang pang',
+            role: 'Developer Staff',
+            img: 'https://i.pravatar.cc/100?img=47'
+        },
+        {
+            name: 'TannXyz',
+            role: 'Developer Staff',
+            img: 'https://i.pravatar.cc/100?img=47'
+        },
+        {
+            name: 'Yuutast',
+            role: 'Developer Staff',
+            img: 'https://i.pravatar.cc/100?img=47'
+        },
+        {
+            name: 'اوليف',
+            role: 'Developer Staff',
+            img: 'https://i.pravatar.cc/100?img=47'
+        },
+        {
+            name: 'uwin',
+            role: 'Payment Staff',
             img: 'https://i.pravatar.cc/100?img=9'
         },
         {
-            name: 'Aqua',
-            role: 'Moderator',
+            name: 'Valery AJA',
+            role: 'Payment Staff',
+            img: 'https://i.pravatar.cc/100?img=9'
+        },
+        {
+            name: '<T>',
+            role: 'Partner Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Aress AJA😹',
+            role: 'Partner Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Dioo!!',
+            role: 'Partner Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Erick🌹',
+            role: 'Partner Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Fall Kangen Yupi',
+            role: 'Partner Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'INA samuel pritchard',
+            role: 'Partner Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'jean',
+            role: 'Partner Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Rama AJA',
+            role: 'Partner Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Rikka 52-hz',
+            role: 'Partner Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Riva',
+            role: 'Partner Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Amertha',
+            role: 'Event Creative Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'dd kei',
+            role: 'Event Creative Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'yaz aphrodite',
+            role: 'Event Creative Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Yeri',
+            role: 'Event Creative Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Flynn',
+            role: 'Female Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Nacan F4',
+            role: 'Female Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'nepops',
+            role: 'Female Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'SENA',
+            role: 'Female Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: '.amoyyTK B!¡!¡!',
+            role: 'Publication Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Trestan',
+            role: 'Publication Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Leyvinee',
+            role: 'Media Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Arios - Hoku',
+            role: 'Media Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Fath Akira',
+            role: 'Media Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'El',
+            role: 'Design & Editor Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'eru',
+            role: 'Design & Editor Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Nuts AJA',
+            role: 'Design & Editor Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'nvm',
+            role: 'Design & Editor Staff',
             img: 'https://i.pravatar.cc/100?img=20'
         }
     ];
 
-    staffData.forEach(s => {
-        const card = create('div', ['staff-card']);
-        card.innerHTML = `
-        <img src="${s.img}" class="staff-avatar" alt="${s.name}">
-        <div class="staff-info">
-          <h4>${s.name}</h4>
-          <span>${s.role}</span>
-          <span class="staff-status"><i class="fa-solid fa-circle"></i> Online</span>
-        </div>
-        <i class="fa-brands fa-discord staff-discord-icon"></i>
-      `;
-        staffGrid.appendChild(card);
-    });
+    const halfIndex = Math.ceil(staffData.length / 2);
+    const row1StaffData = staffData.slice(0, halfIndex);
+    const row2StaffData = staffData.slice(halfIndex);
 
-    staffContainer.appendChild(staffGrid);
+    function createStaffMarqueeRow(items, directionClass) {
+        const trackWrapper = create('div', ['marquee-track-wrapper']);
+        const track = create('div', ['marquee-track', directionClass]);
+        const combinedItems = [...items, ...items, ...items];
+
+        combinedItems.exports = combinedItems.forEach(s => {
+            const card = create('div', ['staff-card']);
+            card.innerHTML = `
+                <img src="${s.img}" class="staff-avatar" alt="${s.name || 'Staff'}">
+                <div class="staff-info">
+                  <h4>${s.name || 'Staff Member'}</h4>
+                  <span>${s.role}</span>
+                  <span class="staff-status"><i class="fa-solid fa-circle"></i> Online</span>
+                </div>
+                <i class="fa-brands fa-discord staff-discord-icon"></i>
+            `;
+            track.appendChild(card);
+        });
+
+        trackWrapper.appendChild(track);
+        return trackWrapper;
+    }
+
+    // Menggunakan fungsi render baris staff dengan animasi yang sama seperti galeri makanan
+    function generateStaffMarquee(items, directionClass) {
+        const trackWrapper = create('div', ['marquee-track-wrapper']);
+        const track = create('div', ['marquee-track', directionClass]);
+        const combinedItems = [...items, ...items, ...items];
+
+        combinedItems.forEach(s => {
+            const card = create('div', ['staff-card']);
+            card.innerHTML = `
+                <img src="${s.img}" class="staff-avatar" alt="${s.name || 'Staff'}">
+                <div class="staff-info">
+                  <h4>${s.name || 'Staff Member'}</h4>
+                  <span>${s.role}</span>
+                  <span class="staff-status"><i class="fa-solid fa-circle"></i> Online</span>
+                </div>
+                <i class="fa-brands fa-discord staff-discord-icon"></i>
+            `;
+            track.appendChild(card);
+        });
+
+        trackWrapper.appendChild(track);
+        return trackWrapper;
+    }
+
+    staffSliderContainer.appendChild(generateStaffMarquee(row1StaffData, 'marquee-left'));
+    staffSliderContainer.appendChild(generateStaffMarquee(row2StaffData, 'marquee-right'));
+
+    staffContainer.appendChild(staffSliderContainer);
     staffSection.appendChild(staffContainer);
 
     // ==========================================
