@@ -348,12 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'Arisa',
             role: 'Owner',
-            img: 'https://i.pravatar.cc/100?img=12'
-        },
-        {
-            name: 'Jean',
-            role: 'Head Staff',
-            img: 'https://i.pravatar.cc/100?img=12'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Arisa.png'
         },
         {
             name: 'Rena ☕',
@@ -363,37 +358,37 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'Daja',
             role: 'Developer Staff',
-            img: 'https://i.pravatar.cc/100?img=47'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/DAJA.png'
         },
         {
             name: 'pang pang',
             role: 'Developer Staff',
-            img: 'https://i.pravatar.cc/100?img=47'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Pang_Pang.png'
         },
         {
             name: 'TannXyz',
             role: 'Developer Staff',
-            img: 'https://i.pravatar.cc/100?img=47'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/TannXyz.png'
         },
         {
             name: 'Yuutast',
             role: 'Developer Staff',
-            img: 'https://i.pravatar.cc/100?img=47'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Yuutast.png'
         },
         {
             name: 'اوليف',
             role: 'Developer Staff',
-            img: 'https://i.pravatar.cc/100?img=47'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Olip.png'
         },
         {
             name: 'uwin',
             role: 'Payment Staff',
-            img: 'https://i.pravatar.cc/100?img=9'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Uwin.png'
         },
         {
             name: 'Valery AJA',
             role: 'Payment Staff',
-            img: 'https://i.pravatar.cc/100?img=9'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Valery_Aja.png'
         },
         {
             name: '<T>',
