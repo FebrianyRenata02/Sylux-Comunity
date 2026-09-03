@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const btnDiscordNav = create('a', ['btn-discord-nav'], {
-        href: 'https://discord.gg/sylux',
+        href: 'https://discord.gg/wJZmace2V8',
         target: '_blank'
     });
     btnDiscordNav.innerHTML = `<i class="fa-brands fa-discord"></i> Join Discord`;
@@ -148,7 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutText.appendChild(featureList);
 
     const btnJoin = create('a', ['btn-purple'], {
-        href: 'https://discord.gg/sylux'
+        href: 'https://discord.gg/wJZmace2V8',
+        target: '_blank'
     });
     btnJoin.innerHTML = `<i class="fa-brands fa-discord"></i> Join Now <i class="fa-solid fa-arrow-right"></i>`;
     aboutText.appendChild(btnJoin);
@@ -398,32 +399,27 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'Aress AJA😹',
             role: 'Partner Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Aress_AJA%F0%9F%98%B9.png'
         },
         {
             name: 'Dioo!!',
             role: 'Partner Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Dioo!!.png'
         },
         {
             name: 'Erick🌹',
             role: 'Partner Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Erick%F0%9F%8C%B9.png'
         },
         {
             name: 'Fall Kangen Yupi',
             role: 'Partner Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Fall%20Kangen%20Yupi.png'
         },
         {
-            name: 'INA samuel pritchard',
+            name: 'INA Luzzie',
             role: 'Partner Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
-        },
-        {
-            name: 'jean',
-            role: 'Partner Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/INA%20Luzzie.png'
         },
         {
             name: 'Rama AJA',
@@ -572,7 +568,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <h2>READY TO JOIN <span class="highlight-blue">SYLUX</span>?</h2>
         <p>Be part of our amazing community and create unforgettable memories.</p>
       </div>
-      <a href="https://discord.gg/sylux" class="btn-large-discord"><i class="fa-brands fa-discord"></i> Join Discord Now</a>
+      <a href="https://discord.gg/wJZmace2V8" target="_blank" class="btn-large-discord"><i class="fa-brands fa-discord"></i> Join Discord Now</a>
     `;
 
     prefooterContainer.appendChild(prefooterCard);
@@ -590,7 +586,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <h3>SYLUX</h3>
         <p>Entertainment, Gaming, and Community All in one place.</p>
         <div class="footer-socials">
-          <a href="#"><i class="fa-brands fa-discord"></i></a>
+          <a href="https://discord.gg/wJZmace2V8" target="_blank"><i class="fa-brands fa-discord"></i></a>
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
           <a href="#"><i class="fa-brands fa-youtube"></i></a>
           <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -619,8 +615,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="footer-col">
         <h4>SOCIAL MEDIA</h4>
         <ul>
-          <li><a href="https://discord.gg/sylux">Discord</a></li>
-          <li><a href="https://www.instagram.com/syluxcommunity_/">Instagram</a></li>
+          <li><a href="https://discord.gg/wJZmace2V8" target="_blank">Discord</a></li>
+          <li><a href="https://www.instagram.com/syluxcommunity_/" target="_blank">Instagram</a></li>
           <li><a href="#">YouTube</a></li>
           <li><a href="#">Twitter</a></li>
         </ul>
@@ -628,7 +624,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="footer-join-box">
         <h5>Join Our Discord</h5>
         <p>Click the button below to join our amazing community!</p>
-        <a href="https://discord.gg/sylux" class="btn-small-discord"><i class="fa-brands fa-discord"></i> Join Discord</a>
+        <a href="https://discord.gg/wJZmace2V8" target="_blank" class="btn-small-discord"><i class="fa-brands fa-discord"></i> Join Discord</a>
       </div>
     `;
 
@@ -674,4 +670,69 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.style.boxShadow = 'none';
         }
     });
+
+    // ==========================================
+    // 9. DISCORD RICH PRESENCE (RPC) INTEGRATION
+    // ==========================================
+    try {
+        const RPC = require('discord-rpc');
+        const fs = require('fs');
+
+
+        let rpcConfig = {
+            clientId: '1497481163957207041',
+            details: 'Cari Teman? Join Discord!',
+            state: 'Warga Aktif (1 of 100)',
+            largeImageKey: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Sylux-Logo.png',
+            largeImageText: 'Sylux',
+            buttons: [{
+                    label: 'Join Discord Community',
+                    url: 'https://discord.com/invite/sylux'
+                },
+                {
+                    label: 'Visit Site',
+                    url: 'https://sylux-virid.vercel.app/'
+                }
+            ]
+        };
+
+        if (fs.existsSync('./config.json')) {
+            const fileData = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
+            let largeImg = rpcConfig.largeImageKey;
+            let largeText = rpcConfig.largeImageText;
+            if (fileData.assets) {
+                if (fileData.assets.large_image) largeImg = fileData.assets.large_image;
+                if (fileData.assets.large_text) largeText = fileData.assets.large_text;
+            }
+            rpcConfig = {
+                ...rpcConfig,
+                ...fileData,
+                largeImageKey: largeImg,
+                largeImageText: largeText
+            };
+        }
+
+        const rpcClient = new RPC.Client({
+            transport: 'ipc'
+        });
+
+        rpcClient.on('ready', () => {
+            console.log('Rich Presence Sylux aktif!');
+            rpcClient.setActivity({
+                details: rpcConfig.details,
+                state: rpcConfig.state,
+                largeImageKey: rpcConfig.largeImageKey,
+                largeImageText: rpcConfig.largeImageText,
+                buttons: rpcConfig.buttons
+            });
+        });
+
+        rpcClient.login({
+            clientId: rpcConfig.clientId
+        }).catch(err => {
+            console.error('Gagal menghubungkan Discord RPC:', err);
+        });
+    } catch (e) {
+        console.log('Mode browser aktif: Discord RPC dilewati.');
+    }
 });
