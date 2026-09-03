@@ -481,7 +481,7 @@ document.addEventListener('DOMContentLoaded', () => {
             role: 'Publication Staff',
             img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/amoyyTK.png'
         },
-        {
+     {
             name: 'sytannn',
             role: 'Publication Staff',
             img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/sytannn.png'
@@ -504,22 +504,22 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'El',
             role: 'Design & Editor Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/EL.png'
         },
         {
             name: 'eru',
             role: 'Design & Editor Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/eru.png'
         },
         {
             name: 'Nuts AJA',
             role: 'Design & Editor Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Nuts%20Aja.png'
         },
         {
             name: 'nvm',
             role: 'Design & Editor Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/nvm.png'
         }
     ];
 
