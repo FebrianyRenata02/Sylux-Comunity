@@ -489,12 +489,12 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'Leyvinee',
             role: 'Media Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Leyvinee.png'
         },
         {
             name: 'Arios - Hoku',
             role: 'Media Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Arios%20-%20Hoku.png'
         },
         {
             name: 'Fath Akira',
