@@ -429,7 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'Rikka 52-hz',
             role: 'Partner Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Rikka.png'
         },
         {
             name: 'Riva',
