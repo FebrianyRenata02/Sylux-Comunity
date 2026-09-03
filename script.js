@@ -439,17 +439,17 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'Amertha',
             role: 'Event Creative Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Amertha.png'
         },
         {
             name: 'dd kei',
             role: 'Event Creative Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/dd%20kei.png'
         },
         {
             name: 'yaz aphrodite',
             role: 'Event Creative Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/yaz%20aphrodite.png'
         },
         {
             name: 'Yeri',
