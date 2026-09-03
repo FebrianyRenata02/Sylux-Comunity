@@ -464,7 +464,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'Nacan F4',
             role: 'Female Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Nacan%20F4.png'
         },
         {
             name: 'nepops',
@@ -474,7 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'SENA',
             role: 'Female Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/SENA.png'
         },
         {
             name: '.amoyyTK B!¡!¡!',
