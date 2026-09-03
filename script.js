@@ -499,7 +499,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'Fath Akira',
             role: 'Media Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Fath%20Akira.png'
         },
         {
             name: 'El',
