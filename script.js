@@ -454,12 +454,12 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'Yeri',
             role: 'Event Creative Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Yeri.png'
         },
         {
             name: 'Flynn',
             role: 'Female Staff',
-            img: 'https://i.pravatar.cc/100?img=20'
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Flynn.png'
         },
         {
             name: 'Nacan F4',
