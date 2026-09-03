@@ -22,28 +22,187 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = create('div', ['nav-menu']);
     const navLinksUl = create('ul', ['nav-links']);
 
-    const menuItems = [{
-            name: 'Home',
-            href: '#home'
+        const staffData = [{
+            name: 'Senaidert',
+            role: 'Founder',
+            img: 'https://i.pravatar.cc/100?img=33'
         },
         {
-            name: 'About',
-            href: '#about'
+            name: 'Arisa',
+            role: 'Owner',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Arisa.png'
         },
         {
-            name: 'Features',
-            href: '#features'
+            name: 'Rena ☕',
+            role: 'Developer Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/renata.png'
         },
         {
-            name: 'Food Gallery',
-            href: '#gallery'
+            name: 'Daja',
+            role: 'Developer Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/DAJA.png'
         },
         {
-            name: 'Staff',
-            href: '#staff'
+            name: 'pang pang',
+            role: 'Developer Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Pang_Pang.png'
+        },
+        {
+            name: 'TannXyz',
+            role: 'Developer Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/TannXyz.png'
+        },
+        {
+            name: 'Yuutast',
+            role: 'Developer Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Yuutast.png'
+        },
+        {
+            name: 'اوليف',
+            role: 'Developer Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Olip.png'
+        },
+        {
+            name: 'uwin',
+            role: 'Payment Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Uwin.png'
+        },
+        {
+            name: 'Valery AJA',
+            role: 'Payment Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Valery_Aja.png'
+        },
+        {
+            name: '<T>',
+            role: 'Partner Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Aress AJA😹',
+            role: 'Partner Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Aress_AJA%F0%9F%98%B9.png'
+        },
+        {
+            name: 'Dioo!!',
+            role: 'Partner Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Dioo!!.png'
+        },
+        {
+            name: 'Erick🌹',
+            role: 'Partner Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Erick%F0%9F%8C%B9.png'
+        },
+        {
+            name: 'Fall Kangen Yupi',
+            role: 'Partner Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Fall%20Kangen%20Yupi.png'
+        },
+        {
+            name: 'INA Luzzie',
+            role: 'Partner Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/INA%20Luzzie.png'
+        },
+        {
+            name: 'Rama AJA',
+            role: 'Partner Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Rikka 52-hz',
+            role: 'Partner Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Rikka.png'
+        },
+        {
+            name: 'Riva',
+            role: 'Partner Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Amertha',
+            role: 'Event Creative Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Amertha.png'
+        },
+        {
+            name: 'dd kei',
+            role: 'Event Creative Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/dd%20kei.png'
+        },
+        {
+            name: 'yaz aphrodite',
+            role: 'Event Creative Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/yaz%20aphrodite.png'
+        },
+        {
+            name: 'Yeri',
+            role: 'Event Creative Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Yeri.png'
+        },
+        {
+            name: 'Flynn',
+            role: 'Female Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Flynn.png'
+        },
+        {
+            name: 'Nacan F4',
+            role: 'Female Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/Nacan%20F4.png'
+        },
+        {
+            name: 'nepops',
+            role: 'Female Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'SENA',
+            role: 'Female Staff',
+            img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/SENA.png'
+        },
+        {
+            name: '.amoyyTK B!¡!¡!',
+            role: 'Publication Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Trestan',
+            role: 'Publication Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Leyvinee',
+            role: 'Media Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Arios - Hoku',
+            role: 'Media Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Fath Akira',
+            role: 'Media Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'El',
+            role: 'Design & Editor Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'eru',
+            role: 'Design & Editor Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'Nuts AJA',
+            role: 'Design & Editor Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
+        },
+        {
+            name: 'nvm',
+            role: 'Design & Editor Staff',
+            img: 'https://i.pravatar.cc/100?img=20'
         }
     ];
-
     menuItems.forEach(item => {
         const li = create('li');
         li.appendChild(create('a', [], {
