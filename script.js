@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const btnDiscordNav = create('a', ['btn-discord-nav'], {
-        href: 'https://discord.gg/wJZmace2V8',
+        href: 'https://discord.com/invite/sylux',
         target: '_blank'
     });
     btnDiscordNav.innerHTML = `<i class="fa-brands fa-discord"></i> Join Discord`;
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutText.appendChild(featureList);
 
     const btnJoin = create('a', ['btn-purple'], {
-        href: 'https://discord.gg/wJZmace2V8',
+        href: 'https://discord.com/invite/sylux',
         target: '_blank'
     });
     btnJoin.innerHTML = `<i class="fa-brands fa-discord"></i> Join Now <i class="fa-solid fa-arrow-right"></i>`;
@@ -481,7 +481,7 @@ document.addEventListener('DOMContentLoaded', () => {
             role: 'Publication Staff',
             img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/amoyyTK.png'
         },
-     {
+        {
             name: 'sytannn',
             role: 'Publication Staff',
             img: 'https://raw.githubusercontent.com/FebrianyRenata02/Sylux-Comunity/refs/heads/main/img/sytannn.png'
@@ -568,7 +568,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <h2>READY TO JOIN <span class="highlight-blue">SYLUX</span>?</h2>
         <p>Be part of our amazing community and create unforgettable memories.</p>
       </div>
-      <a href="https://discord.gg/wJZmace2V8" target="_blank" class="btn-large-discord"><i class="fa-brands fa-discord"></i> Join Discord Now</a>
+      <a href="https://discord.com/invite/sylux" target="_blank" class="btn-large-discord"><i class="fa-brands fa-discord"></i> Join Discord Now</a>
     `;
 
     prefooterContainer.appendChild(prefooterCard);
@@ -586,7 +586,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <h3>SYLUX</h3>
         <p>Entertainment, Gaming, and Community All in one place.</p>
         <div class="footer-socials">
-          <a href="https://discord.gg/wJZmace2V8" target="_blank"><i class="fa-brands fa-discord"></i></a>
+          <a href="https://discord.com/invite/sylux" target="_blank"><i class="fa-brands fa-discord"></i></a>
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
           <a href="#"><i class="fa-brands fa-youtube"></i></a>
           <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -615,7 +615,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="footer-col">
         <h4>SOCIAL MEDIA</h4>
         <ul>
-          <li><a href="https://discord.gg/wJZmace2V8" target="_blank">Discord</a></li>
+          <li><a href="https://discord.com/invite/sylux" target="_blank">Discord</a></li>
           <li><a href="https://www.instagram.com/syluxcommunity_/" target="_blank">Instagram</a></li>
           <li><a href="#">YouTube</a></li>
           <li><a href="#">Twitter</a></li>
@@ -624,13 +624,34 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="footer-join-box">
         <h5>Join Our Discord</h5>
         <p>Click the button below to join our amazing community!</p>
-        <a href="https://discord.gg/wJZmace2V8" target="_blank" class="btn-small-discord"><i class="fa-brands fa-discord"></i> Join Discord</a>
+        <a href="https://discord.com/invite/sylux" target="_blank" class="btn-small-discord"><i class="fa-brands fa-discord"></i> Join Discord</a>
       </div>
     `;
 
-    const footerBottom = create('div', ['footer-bottom'], {}, '© 2026 SYLUX. All Rights Reserved.');
-    // Mengatur agar teks rata kiri via inline style atau pastikan CSS class .footer-bottom memiliki text-align: left
+    // Footer bottom layout with copyright on left and social media icons on right
+    const footerBottom = create('div', ['footer-bottom']);
+    footerBottom.style.display = 'flex';
+    footerBottom.style.justifyContent = 'space-between';
+    footerBottom.style.alignItems = 'center';
+    footerBottom.style.flexWrap = 'wrap';
+    footerBottom.style.gap = '15px';
     footerBottom.style.textAlign = 'left';
+
+    const copyrightText = create('span', [], {}, '© 2026 SYLUX. All Rights Reserved.');
+
+    // Social icons container matching reference image
+    const socialIconsDiv = create('div');
+    socialIconsDiv.style.display = 'flex';
+    socialIconsDiv.style.gap = '12px';
+    socialIconsDiv.innerHTML = `
+      <a href="https://www.instagram.com/syluxcommunity_/" target="_blank" style="color: #fff; background: rgba(255,255,255,0.08); width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: 0.3s;"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" target="_blank" style="color: #fff; background: rgba(255,255,255,0.08); width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: 0.3s;"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#" target="_blank" style="color: #fff; background: rgba(255,255,255,0.08); width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: 0.3s;"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://discord.com/invite/sylux" target="_blank" style="color: #fff; background: rgba(255,255,255,0.08); width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: 0.3s;"><i class="fa-brands fa-discord"></i></a>
+    `;
+
+    footerBottom.appendChild(copyrightText);
+    footerBottom.appendChild(socialIconsDiv);
 
     footerContainer.appendChild(footerGrid);
     footerContainer.appendChild(footerBottom);
@@ -679,7 +700,6 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
         const RPC = require('discord-rpc');
         const fs = require('fs');
-
 
         let rpcConfig = {
             clientId: '1497481163957207041',
